@@ -77,3 +77,8 @@ h1, h2, h3, h4, h5, h6 {
 [data-theme='dark'] h6 {
   color: var(--ifm-heading-color);
 }
+
+/* Hide the Next and Previous buttons at the bottom of all pages */
+.pagination-nav {
+  display: none !important;
+}

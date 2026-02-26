@@ -1,0 +1,20 @@
+# Wagonwood
+
+**Region:** Kingdom of Cruces, Continent of Aethelgard  
+**Current Authority:** Baron Benjamin Vinchel
+
+## Overview
+
+A rugged, woodland settlement currently plagued by an escalating threat from local goblin tribes. The dense forests hide old ruins and forgotten history from before the Wild Magic Storms.
+
+## Key Locations
+
+* **The Vinchel Estate:** The seat of local power.
+* **The Magic Shop:** The only place to find magic items.
+
+<details>
+<summary>DM Notes & Secrets</summary>
+
+* The goblins attacking Wagonwood aren't acting normally; they have been found with strange, demonic markings on them. 
+
+</details>

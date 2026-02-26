@@ -1,19 +1,20 @@
 // @ts-check
+// Note: type annotations allow type checking and IDEs autocompletion
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'The World of Concreth',
-  tagline: 'A D&D 5E World Bible',
-  favicon: 'img/favicon.ico',
+  tagline: 'The omniscient record of the Third Epoch.',
+  favicon: 'img/concreth-d4.svg',
 
-  // IMPORTANT: Before you publish to GitHub, replace 'BootGoblin' 
-  // with your actual GitHub username below.
-  url: 'https://your-github-username.github.io',
+  url: 'https://BootGoblin.github.io',
   baseUrl: '/concreth-bible/',
+
   organizationName: 'BootGoblin', 
   projectName: 'concreth-bible', 
+  trailingSlash: false,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
@@ -27,12 +28,12 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
-          // Edit URL is removed here so players don't see a link to your raw GitHub repository
+          sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: 'docs',
         },
-        blog: false, // Disabled to keep the site functioning purely as a reference wiki
+        blog: false, 
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
@@ -42,28 +43,25 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode: 'dark', 
-        respectPrefersColorScheme: true,
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
       },
       navbar: {
         title: 'Concreth',
+        logo: {
+          alt: 'Concreth Logo',
+          src: 'img/concreth-d4.svg',
+        },
         items: [
-          // Public link to the completed legacy campaign
-          {
-            type: 'docSidebar',
-            sidebarId: 'legacySidebar',
-            position: 'left',
-            label: 'The Shattered Balance (Legacy)',
-          },
-          // Notice: We purposefully DO NOT put links to the Wagonwood or Tormalon 
-          // sidebars here. That is how we maintain Security Through Obscurity.
+          // Left intentionally blank to protect your obscured campaign links!
         ],
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} Andrew J. Lenz. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} The Concreth Master Tome.`,
       },
     }),
 };
 
-export default config;
+module.exports = config;
